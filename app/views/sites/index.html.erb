@@ -1,0 +1,8 @@
+	<h1>Search for a site to check its links</h1>
+
+	<%= form_for @site do |f| %>
+		<%= f.label :url %>
+		<%= f.text_field :url %> <br>
+		<%= f.submit %>
+	<% end%>
+		
