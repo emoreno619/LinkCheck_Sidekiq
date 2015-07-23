@@ -2,6 +2,7 @@ require 'nokogiri'
 require 'open-uri'
 
 
+
 class SitesController < ApplicationController
 	def index
 		@sites = Site.all
@@ -23,8 +24,17 @@ class SitesController < ApplicationController
 				links.push(link.attributes['href'].value)
 			end
 		end
-		# puts w[0].attributes['href'].value
-		puts links
+		
+		@request = Typhoeus.get(links[0])
+		binding.pry
+		puts @request.options[:response_code]
+
+		# links.each do |link|
+		# 	@request = Typhoeus.get(link)
+
+		# end
+
+
 		if @site.save
 			redirect_to sites_path
 		else

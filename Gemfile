@@ -45,6 +45,7 @@ group :development, :test do
   gem 'rest-client', '~> 1.8.0'
   gem 'mime-types'
   gem 'netrc'
+  gem 'typhoeus'
   gem 'http-cookie'
   gem 'puma-rails'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
