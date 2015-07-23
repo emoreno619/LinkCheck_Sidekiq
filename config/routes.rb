@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'root', to: 'sites#index'
-  get '/index', to: 'sites#index'
-  post '/index', to: 'sites#create'
+  get '/', to: 'sites#index'
+  get '/sites', to: 'sites#index'
+  post '/sites', to: 'sites#create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
