@@ -3,7 +3,7 @@
 	
 		<% @sites.each do |site| %>
 			<h2>	<%= site.url %> </h2>
-			<p>	<%= site.html %></p>
+			
 		<% end %>
 
 	<%= form_for @site do |f| %>

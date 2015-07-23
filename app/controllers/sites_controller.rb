@@ -25,14 +25,15 @@ class SitesController < ApplicationController
 			end
 		end
 		
-		@request = Typhoeus.get(links[0])
-		binding.pry
-		puts @request.options[:response_code]
+		# @request = Typhoeus.get(links[0])
+		
+		# puts @request.options[:response_code]
+		
 
-		# links.each do |link|
-		# 	@request = Typhoeus.get(link)
-
-		# end
+		links.each do |link|
+			@request = Typhoeus.get(link)
+			puts @request.options[:response_code]
+		end
 
 
 		if @site.save
