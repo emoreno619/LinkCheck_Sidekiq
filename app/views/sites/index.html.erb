@@ -1,5 +1,12 @@
 	<h1>Search for a site to check its links</h1>
 
+	
+		<% @sites.each do |site| %>
+			<h2>	<%= site.url %> </h2>
+		<% end %>
+	
+
+
 	<%= form_for @site do |f| %>
 		<%= f.label :url %>
 		<%= f.text_field :url %> <br>
